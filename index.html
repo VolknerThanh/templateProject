@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="./styles/common.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="header">
@@ -24,11 +25,11 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="body">
       <div class="service-button-wrapper">
         <img src="./resources/service-button.png" />
       </div>
+    </div>
+    <div class="body">      
       <div class="banner-wrapper">
         <div class="banner-content">
           <div class="banner-logo-title-wrapper">
@@ -50,5 +51,15 @@
     <div class="footer">
       <div></div>
     </div>
+
+    <script>
+      $(window).scroll(function () {
+        var sticky = $('.header'),
+          scroll = $(window).scrollTop();
+
+          if(scroll >= 100) sticky.addClass('fixed');
+          else sticky.removeClass('.fixed');
+      })
+    </script>
   </body>
 </html>
